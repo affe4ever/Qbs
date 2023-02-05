@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Changegravity : MonoBehaviour
 {
-
-    private float speed = 2.0f;
+    private bool isChanged = false;
+    private float force = 9.8f;
     public GameObject character;
 
     // Start is called before the first frame update
@@ -19,7 +19,17 @@ public class Changegravity : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Space))
         {
-            transform.position += Vector3.up * speed * Time.deltaTime;
+            if (isChanged) {
+                Physics.gravity = new Vector3(0, -force, 0);
+                isChanged = false;
+            }
+            else
+            {
+                Physics.gravity = new Vector3(0, force, 0);
+                isChanged = true;
+            }
+            //character.gravity = new Vector3(0, force, 0);
+            //Physics.gravity = new Vector3(0, -force, 0);   
         }
     }
 }

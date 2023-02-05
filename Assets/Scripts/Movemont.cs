@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Movemont : MonoBehaviour
 {
+	public float speed = 2.0f;
+	public GameObject character;
+
     // Start is called before the first frame update
     void Start()
     {
-        //Physics.gravity = new Vector3(0, -1.0F, 0);
+        
     }
 
     // Update is called once per frame
-private float speed = 2.0f;
-public GameObject character;
+
 
 void Update () {
 		
