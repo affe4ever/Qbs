@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 462351220}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Flooor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -937,33 +937,18 @@ GameObject:
   - component: {fileID: 780299163}
   - component: {fileID: 780299162}
   - component: {fileID: 780299161}
-  - component: {fileID: 780299160}
   - component: {fileID: 780299165}
   - component: {fileID: 780299167}
   - component: {fileID: 780299166}
+  - component: {fileID: 780299168}
+  - component: {fileID: 780299169}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &780299160
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780299159}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!65 &780299161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1055,7 +1040,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  character: {fileID: 0}
+  character: {fileID: 690408549}
+  isRight: 0
+  isLeft: 0
+  isForward: 0
+  isBack: 0
 --- !u!114 &780299166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,7 +1071,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b029fabf446fec3488b558966e915429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
+  isSpacePressed: 0
+  gravityReversed: 0
+  isGrounded: 0
+  character: {fileID: 780299159}
+  rb: {fileID: 0}
+--- !u!143 &780299168
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780299159}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &780299169
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780299159}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &784254315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,7 +1991,7 @@ GameObject:
   - component: {fileID: 1888190600}
   m_Layer: 0
   m_Name: Celing
-  m_TagString: Untagged
+  m_TagString: Flooor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
