@@ -21,14 +21,17 @@ public class Changegravity : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded) {
-            isSpacePressed = true;
+            Gravity();
+            //isSpacePressed = true;
         }
-        else{
+        /*else{
             isSpacePressed = false;
-        }
+        }*/
     }
 
     void FixedUpdate() {
+
+        /*
         if (isSpacePressed){
             if (gravityReversed){
                 gravityReversed = false;
@@ -40,7 +43,7 @@ public class Changegravity : MonoBehaviour
 
         if (gravityReversed) {
             rb.velocity = new Vector3(0, force, 0);
-        }
+        }*/
     }
 
     void OnCollisionEnter(Collision collision) {
@@ -51,6 +54,20 @@ public class Changegravity : MonoBehaviour
     void OnCollisionExit(Collision collision) {
         if (collision.gameObject.tag == "Flooor"){
             isGrounded = false;
+        }
+    }
+
+    void Gravity()
+    {
+        if (gravityReversed){
+            gravityReversed = false;
+            rb.useGravity= true;
+
+        }
+        else if (!gravityReversed) {
+            rb.useGravity=false;
+            rb.velocity = new Vector3(0, force, 0);
+            gravityReversed = true;
         }
     }
 }
