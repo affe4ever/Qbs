@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -221,6 +221,23 @@ Transform:
   m_Father: {fileID: 1117465361}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 269.935}
+--- !u!1 &146560129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4222840702361364045, guid: 0c166b0028a133d4089a548824bf1a7e, type: 3}
+  m_PrefabInstance: {fileID: 2015363119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &146560134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146560129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4a6d348e4a86c4e9beac202ce05090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &182916046
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,7 +638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690408549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.14, y: 1.944, z: -6.29}
+  m_LocalPosition: {x: 2.25, y: 2.29, z: -7.73}
   m_LocalScale: {x: 0.59341, y: 0.59341, z: 0.59341}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1005,6 +1022,23 @@ Transform:
   m_Father: {fileID: 1117465361}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
+--- !u!1 &984209488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8789844241490327703, guid: 0c166b0028a133d4089a548824bf1a7e, type: 3}
+  m_PrefabInstance: {fileID: 2015363119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &984209490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984209488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be3d3730f4c57840a3d7403108580ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1117465360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1123,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+--- !u!1 &1263225615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1263225617}
+  - component: {fileID: 1263225616}
+  m_Layer: 0
+  m_Name: Game Event System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1263225616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263225615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d71083684b4d2b40814e16e6138bc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1263225617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263225615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4701557, y: 6.3722806, z: -9.945211}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1324780561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1482,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1868685505080500320, guid: 0c166b0028a133d4089a548824bf1a7e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4222840702361364045, guid: 0c166b0028a133d4089a548824bf1a7e, type: 3}
       propertyPath: m_Name
       value: Trigger
