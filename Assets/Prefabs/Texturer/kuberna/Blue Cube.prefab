@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -9141774645917115449}
   m_Layer: 0
   m_Name: Blue Cube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,7 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rb: {fileID: 0}
+  rb: {fileID: 3961890301277667259}
+  isGrounded: 0
 --- !u!114 &-9141774645917115449
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7136907456601287321}
   m_Layer: 0
   m_Name: Orange Cube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,8 +131,9 @@ MonoBehaviour:
   isSpacePressed: 0
   gravityReversed: 0
   isGrounded: 0
-  character: {fileID: 0}
-  rb: {fileID: 0}
+  force: 9.8
+  character: {fileID: 8401430318073606955}
+  rb: {fileID: 8401430318073606956}
 --- !u!114 &7136907456601287321
 MonoBehaviour:
   m_ObjectHideFlags: 0

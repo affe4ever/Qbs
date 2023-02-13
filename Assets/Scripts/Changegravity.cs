@@ -7,7 +7,7 @@ public class Changegravity : MonoBehaviour
     public bool isSpacePressed;
     public bool gravityReversed;
     public bool isGrounded;
-    private float force = 9.8f;
+    public float force = 9.8f;
     public GameObject character;
     public Rigidbody rb;
 
@@ -61,6 +61,7 @@ public class Changegravity : MonoBehaviour
     {
         if (gravityReversed){
             gravityReversed = false;
+            rb.velocity = new Vector3(0, -force, 0);
             rb.useGravity= true;
 
         }
