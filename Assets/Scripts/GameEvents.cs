@@ -23,6 +23,14 @@ public class GameEvents : MonoBehaviour
             onDoorTriggerEnter(id);
         }
     }
+    public void OpenDoor(int id)
+    {
+
+    }
+    public void CloseDoor(int id)
+    {
+
+    }
     public void ButtonTriggerEnter(int id)
     {
         if (onButtonTriggerEnter != null)

@@ -11,6 +11,8 @@ public class DoorController : MonoBehaviour
     void Start()
     {
         GameEvents.current.onDoorTriggerEnter += OnRoomExit;
+        GameEvents.current.onButtonTriggerEnter += OnDoorOpen;
+        GameEvents.current.onButtonTriggerExit += OnDoorClose;
     }
 
     private void OnRoomExit(int id)
@@ -21,8 +23,32 @@ public class DoorController : MonoBehaviour
         }
     }
 
+    private void OnDoorOpen(int id)
+    {
+        if (id == this.id)
+        {
+            Debug.Log("door opens");
+            this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<Light>().color = Color.green;
+            this.gameObject.transform.GetChild(1).position += new Vector3(0, 0, 1.6f);
+            this.gameObject.transform.GetChild(2).position -= new Vector3(0, 0, 1.6f);
+        }
+    }
+
+    private void OnDoorClose(int id)
+    {
+        if (id == this.id) 
+        { 
+            Debug.Log("door closes");
+            this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<Light>().color = Color.red;
+            this.gameObject.transform.GetChild(1).position -= new Vector3(0, 0, 1.6f);
+            this.gameObject.transform.GetChild(2).position += new Vector3(0, 0, 1.6f);
+        }
+    }
+
     private void OnDestroy() 
     {
         GameEvents.current.onDoorTriggerEnter -= OnRoomExit;
+        GameEvents.current.onButtonTriggerEnter -= OnDoorOpen;
+        GameEvents.current.onButtonTriggerExit -= OnDoorClose;
     }
 }

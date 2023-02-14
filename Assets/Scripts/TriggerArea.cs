@@ -9,12 +9,12 @@ public class TriggerArea : MonoBehaviour
 
     private bool buttonPressed = false;
 
-    Vector3 direction = Vector3.up;
+    private Vector3 direction = Vector3.up;
     private float range = 0.6f;
 
     void Update()
     { 
-        Debug.DrawRay(transform.position, transform.TransformDirection(direction * range));
+        //Debug.DrawRay(transform.position, transform.TransformDirection(direction * range));
     }
 
 
@@ -34,8 +34,7 @@ public class TriggerArea : MonoBehaviour
     {
         if (type == "button" && buttonPressed) 
         {
-            Ray theRay = new Ray(transform.position, transform.TransformDirection(direction * range));
-            Debug.Log("raying u kno");
+            Ray theRay = new(transform.position, transform.TransformDirection(direction * range));
             if (!Physics.Raycast(theRay, out RaycastHit hit, range))
             {
                 GameEvents.current.ButtonTriggerExit(id);
