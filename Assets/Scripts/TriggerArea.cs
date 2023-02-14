@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class TriggerArea : MonoBehaviour
 {
+    public int id;
     private void OnTriggerEnter(Collider other) 
     {
-        GameEvents.current.DoorTriggerEnter();
+        if (other.gameObject.tag == "Player")
+        GameEvents.current.DoorTriggerEnter(id);
     }
 }

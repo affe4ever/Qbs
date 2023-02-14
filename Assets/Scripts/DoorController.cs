@@ -6,16 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int id;
+
     void Start()
     {
         GameEvents.current.onDoorTriggerEnter += OnRoomExit;
     }
 
-    private void OnRoomExit()
+    private void OnRoomExit(int id)
     {
-        Debug.Log("broder du är fri!");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (id == this.id){
+            Debug.Log("broder du är fri!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     private void OnDestroy() {
