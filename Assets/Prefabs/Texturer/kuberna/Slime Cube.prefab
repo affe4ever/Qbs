@@ -419,6 +419,7 @@ GameObject:
   - component: {fileID: 4079648519599778050}
   - component: {fileID: 4079648519599778051}
   - component: {fileID: 4555719242054585068}
+  - component: {fileID: 7287184974884652171}
   m_Layer: 0
   m_Name: Slime Cube
   m_TagString: Slime
@@ -433,7 +434,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4079648519599778052}
-  m_LocalRotation: {x: -0, y: -0.12705351, z: -0, w: 0.99189585}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.03, y: 5.22, z: -6.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -449,7 +450,7 @@ Transform:
   - {fileID: 4079648519535392133}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -14.599, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4079648519599778048
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -547,6 +548,18 @@ MonoBehaviour:
   isLeft: 0
   isForward: 0
   isBack: 0
+--- !u!114 &7287184974884652171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4079648519599778052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e7a3b56262d10448e38a41a135459e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4079648520152997735
 GameObject:
   m_ObjectHideFlags: 0

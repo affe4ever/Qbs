@@ -8,6 +8,7 @@ public class Jump : MonoBehaviour
     public float speed = 10f;
     public Rigidbody rb;
     public bool isGrounded;
+    public float jump;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class Jump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.velocity = new Vector3(0, 5, 0);
+            rb.velocity = new Vector3(0, jump, 0);
         }
     }
 
