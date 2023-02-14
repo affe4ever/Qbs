@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class DoorController : MonoBehaviour
 {
     public int id;
+    public bool isDoorOpen = false;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class DoorController : MonoBehaviour
 
     private void OnRoomExit(int id)
     {
-        if (id == this.id){
+        if (id == this.id && isDoorOpen){
             Debug.Log("broder du är fri!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
@@ -31,6 +32,7 @@ public class DoorController : MonoBehaviour
             this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<Light>().color = Color.green;
             this.gameObject.transform.GetChild(1).position += new Vector3(0, 0, 1.6f);
             this.gameObject.transform.GetChild(2).position -= new Vector3(0, 0, 1.6f);
+            isDoorOpen= true;
         }
     }
 
@@ -42,6 +44,7 @@ public class DoorController : MonoBehaviour
             this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<Light>().color = Color.red;
             this.gameObject.transform.GetChild(1).position -= new Vector3(0, 0, 1.6f);
             this.gameObject.transform.GetChild(2).position += new Vector3(0, 0, 1.6f);
+            isDoorOpen= false;
         }
     }
 
