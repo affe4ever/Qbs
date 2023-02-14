@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private bool isGameOver;
+    public GameObject me;
+    private static bool isGameOver;
+    //try making collectables static to see if the number remains after changing scene
+    private static int collectedCollectables;
 
+    private List<string> levels = new List<string>{
+        "Level 0", "Level 1"
+    };
 //Singleton start
     private static GameManager _instance;
     public static GameManager instance{
@@ -22,14 +29,28 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(me);
         awake();
         isGameOver = false;
-        //scene to main menu (SceneManager)
+        collectedCollectables = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //for testing 
+        if (Input.GetKeyDown(KeyCode.G)){
+            OpenMainMenu();
+        }
+        if (Input.GetKeyDown(KeyCode.H)){
+            OpenLevel(0);
+        }
+        if (Input.GetKeyDown(KeyCode.J)){
+            Debug.Log("Collectables: " + collectedCollectables);
+        }
+        if (Input.GetKeyDown(KeyCode.K)){
+            End();
+        }
         if (isGameOver && Input.GetKeyDown(KeyCode.R)){
             //SceneManager.LoadScene(SceneManager.GetActiveScene().BuildIndex);
         }
@@ -41,4 +62,31 @@ public class GameManager : MonoBehaviour
     public bool getIsGameOver(){
         return isGameOver;
     }
+    private void End(){
+        Application.Quit();
+    }
+
+    public void OpenLevel(int i){
+        if (i >= 0 && i < levels.Count)
+            SceneManager.LoadScene(levels[i]);
+        else Debug.LogError("Game Manager: Scene Level index out of range");
+    }
+
+    //the one that starts because the holderOfGameManager is in that scene
+    public void OpenMainMenu(){
+        SceneManager.LoadScene("maine menu");
+    }
+
+    public void OpenPauseMenu(){
+        SceneManager.LoadScene("test scene");
+    }
+
+    public void OpenEndMenu(){
+        SceneManager.LoadScene("end menu");
+    }
+
+    public void FoundCollectable(){
+        collectedCollectables++;
+    }
+
 }

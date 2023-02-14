@@ -5,9 +5,10 @@ using UnityEngine;
 public class Collectible_pickup : MonoBehaviour
 {
     public GameObject character;
-    public GameObject collectible1;
+    public GameObject collectible;
     private Collider characterCollider;
-    private Collider collectible1Collider;
+    private Collider collectibleCollider;
+    private GameManager gm = GameManager.instance;
 
     void Start()
     {
@@ -16,16 +17,17 @@ public class Collectible_pickup : MonoBehaviour
             characterCollider = character.GetComponent<Collider>();
 
         //Check that the second GameObject exists in the Inspector and fetch the Collider
-        if (collectible1 != null)
-            collectible1Collider = collectible1.GetComponent<Collider>();
+        if (collectible != null)
+            collectibleCollider = collectible.GetComponent<Collider>();
     }
 
     void Update()
     {
         //If the first GameObject's Bounds enters the second GameObject's Bounds, output the message
-        if (characterCollider.bounds.Intersects(collectible1Collider.bounds))
+        if (characterCollider.bounds.Intersects(collectibleCollider.bounds))
         {
-            Destroy(collectible1);
+            gm.FoundCollectable();
+            Destroy(collectible);
             Debug.Log("Bounds intersecting");
         }
     }
