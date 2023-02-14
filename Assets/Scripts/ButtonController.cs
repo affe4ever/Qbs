@@ -17,6 +17,8 @@ public class ButtonController : MonoBehaviour
     {
         if (id == this.id)
         {
+            this.gameObject.transform.GetChild(0).position -= new Vector3(0, (float) 0.05, 0);
+            //GetComponentInChildren<Transform>().position -= new Vector3(0, (float) 0.4, 0);
             Debug.Log("button " + id + " pressed");
         }
     }
@@ -25,6 +27,8 @@ public class ButtonController : MonoBehaviour
     {
         if (id == this.id)
         {
+            this.gameObject.transform.GetChild(0).position += new Vector3(0, (float)0.05, 0);
+            //GetComponentInChildren<Transform>().position += new Vector3(0, (float) 0.4, 0);
             Debug.Log("button " + id + " unpressed");
         }
     }
