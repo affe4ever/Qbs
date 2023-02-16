@@ -12,8 +12,9 @@ public class Jump : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        rb = GetComponent<Rigidbody>();
+    {   
+        isGrounded = true;
+        //rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class Jump : MonoBehaviour
         }
     }
 
-        void OnCollisionEnter(Collision collision) {
+    void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag == "Flooor"){
             isGrounded = true;
         }
