@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
             OpenMainMenu();
         }
         if (Input.GetKeyDown(KeyCode.H)){
-            OpenLevel(0);
+            NextLevel();
         }
         if (Input.GetKeyDown(KeyCode.J)){
             Debug.Log("Collectables: " + collectedCollectables);
@@ -66,12 +66,6 @@ public class GameManager : MonoBehaviour
     }
     private void End(){
         Application.Quit();
-    }
-
-    public void OpenLevel(int i){
-        if (i >= 0 && i < levels.Count)
-            SceneManager.LoadScene(levels[i]);
-        else Debug.LogError("Game Manager: Scene Level index out of range");
     }
 
     public void NextLevel(){
