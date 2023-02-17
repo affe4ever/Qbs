@@ -49,10 +49,10 @@ public class GameManager : MonoBehaviour
             Debug.Log("Collectables: " + collectedCollectables);
         }
         if (Input.GetKeyDown(KeyCode.K)){
-            End();
+            OpenPauseMenu();
         }
 
-        
+
         if (isGameOver && Input.GetKeyDown(KeyCode.R)){
             //SceneManager.LoadScene(SceneManager.GetActiveScene().BuildIndex);
         }
@@ -74,13 +74,17 @@ public class GameManager : MonoBehaviour
         else Debug.LogError("Game Manager: Scene Level index out of range");
     }
 
+    public void NextLevel(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     //the one that starts because the holderOfGameManager is in that scene
     public void OpenMainMenu(){
         SceneManager.LoadScene("maine menu");
     }
 
     public void OpenPauseMenu(){
-        SceneManager.LoadScene("test scene");
+        SceneManager.LoadScene("Level 1,0");
     }
 
     public void OpenEndMenu(){
