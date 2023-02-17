@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e7a3b56262d10448e38a41a135459e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Movemont: {fileID: 1031696161}
+  movemont: {fileID: 1031696161}
 --- !u!114 &1031696161 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4555719242054585068, guid: 3a3b1f70ee181ed4ea643ab807843e97, type: 3}
@@ -1212,6 +1212,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4079648519535392132, guid: 3a3b1f70ee181ed4ea643ab807843e97, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4079648519535392134, guid: 3a3b1f70ee181ed4ea643ab807843e97, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1272,6 +1276,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4079648520152997733, guid: 3a3b1f70ee181ed4ea643ab807843e97, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4079648520152997735, guid: 3a3b1f70ee181ed4ea643ab807843e97, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1291,6 +1299,10 @@ PrefabInstance:
     - target: {fileID: 4079648520771681225, guid: 3a3b1f70ee181ed4ea643ab807843e97, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011804544094082077, guid: 3a3b1f70ee181ed4ea643ab807843e97, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a3b1f70ee181ed4ea643ab807843e97, type: 3}

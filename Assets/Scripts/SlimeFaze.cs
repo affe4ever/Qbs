@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SlimeFaze : MonoBehaviour
 {
-    public Movemont Movemont;
+    public Movemont movemont;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,15 +18,15 @@ public class SlimeFaze : MonoBehaviour
         
     }
 
-        private void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Slime"){
-            Movemont.speed = 1.0f;
+            movemont.speed = 1.0f;
         }
     }
 
     private void OnTriggerExit(Collider other) {
         if(other.gameObject.tag == "Slime"){
-            Movemont.speed = 2.0f;
+            movemont.speed = 2.0f;
         }
     }
 }
