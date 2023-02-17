@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Collectables: " + collectedCollectables);
         }
         if (Input.GetKeyDown(KeyCode.K)){
-            OpenPauseMenu();
+            End();
         }
 
 
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
     public bool getIsGameOver(){
         return isGameOver;
     }
-    private void End(){
+    public void End(){
         Application.Quit();
     }
 
