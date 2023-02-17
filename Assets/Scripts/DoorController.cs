@@ -15,6 +15,9 @@ public class DoorController : MonoBehaviour
         GameEvents.current.onDoorTriggerEnter += OnRoomExit;
         GameEvents.current.onButtonTriggerEnter += OnDoorOpen;
         GameEvents.current.onButtonTriggerExit += OnDoorClose;
+        if (isDoorOpen){
+            OnDoorOpen(this.id);
+        }
     }
 
     private void OnRoomExit(int id)
