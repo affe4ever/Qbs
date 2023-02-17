@@ -5,10 +5,9 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
 
-    public float speed = 10f;
     public Rigidbody rb;
     public bool isGrounded;
-    public float jump;
+    public float jump = 7.0f;
 
     // Start is called before the first frame update
     void Start()
