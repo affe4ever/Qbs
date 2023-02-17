@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private static int collectedCollectables;
 
     private List<string> levels = new List<string>{
-        "Level 0", "Level 1"
+        "Level 0", "Level 1,0", "Level 1,2", "Level 1,3"
     };
 //Singleton start
     private static GameManager _instance;
@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K)){
             End();
         }
+
+        
         if (isGameOver && Input.GetKeyDown(KeyCode.R)){
             //SceneManager.LoadScene(SceneManager.GetActiveScene().BuildIndex);
         }

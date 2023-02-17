@@ -8,10 +8,11 @@ public class Collectible_pickup : MonoBehaviour
     public GameObject collectible;
     private Collider characterCollider;
     private Collider collectibleCollider;
-    private GameManager gm = GameManager.instance;
+    private GameManager gm;
 
     void Start()
     {
+        gm = GameManager.instance;
         //Check that the first GameObject exists in the Inspector and fetch the Collider
         if (character != null)
             characterCollider = character.GetComponent<Collider>();
