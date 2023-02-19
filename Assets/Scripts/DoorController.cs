@@ -2,25 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour
 {
     public int id;
     public bool isDoorOpen = false;
+    private GameManager gm;
 
     void Start()
     {
+        gm = GameManager.instance;
         GameEvents.current.onDoorTriggerEnter += OnRoomExit;
         GameEvents.current.onButtonTriggerEnter += OnDoorOpen;
         GameEvents.current.onButtonTriggerExit += OnDoorClose;
+        if (isDoorOpen){
+            OnDoorOpen(this.id);
+        }
     }
 
     private void OnRoomExit(int id)
     {
         if (id == this.id && isDoorOpen){
             Debug.Log("broder du är fri!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            gm.NextLevel();
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
