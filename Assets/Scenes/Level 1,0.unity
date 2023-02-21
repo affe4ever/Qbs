@@ -420,6 +420,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9141774645917115449, guid: ef69e400610f8f44d9091fc564a25dca, type: 3}
+      propertyPath: speed
+      value: 2.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3961890301277667252, guid: ef69e400610f8f44d9091fc564a25dca, type: 3}
       propertyPath: m_Name
       value: Blue Cube

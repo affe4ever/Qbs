@@ -1269,6 +1269,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7136907456601287321, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
+      propertyPath: speed
+      value: 2.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8401430318073606955, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
       propertyPath: m_Name
       value: Orange Cube
