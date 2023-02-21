@@ -9,10 +9,9 @@ public class GameManager : MonoBehaviour
     private static bool isGameOver;
     //try making collectables static to see if the number remains after changing scene
     private static int collectedCollectables;
+    private int CollectablesInLevel;
+    private int collectedCollectablesInLevel;
 
-    private List<string> levels = new List<string>{
-        "Level 0", "Level 1,0", "Level 1,2", "Level 1,3"
-    };
 //Singleton start
     private static GameManager _instance;
     public static GameManager instance{
@@ -38,23 +37,18 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //for testing 
+        if (Input.GetKeyDown(KeyCode.R)){
+            ReloadLevel();
+        }
         if (Input.GetKeyDown(KeyCode.G)){
-            OpenMainMenu();
+            FoundCollectable();
         }
-        if (Input.GetKeyDown(KeyCode.H)){
-            NextLevel();
-        }
+        //for testing 
         if (Input.GetKeyDown(KeyCode.J)){
-            Debug.Log("Collectables: " + collectedCollectables);
+            Debug.Log("Collectables: " + collectedCollectables + "  CollectablesInLevel: " + collectedCollectablesInLevel);
         }
         if (Input.GetKeyDown(KeyCode.K)){
             End();
-        }
-
-
-        if (isGameOver && Input.GetKeyDown(KeyCode.R)){
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().BuildIndex);
         }
     }
 
@@ -69,10 +63,16 @@ public class GameManager : MonoBehaviour
     }
 
     public void NextLevel(){
+        collectedCollectables += collectedCollectablesInLevel;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        collectedCollectablesInLevel = 0;
+    }
+    public void ReloadLevel(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        collectedCollectablesInLevel = 0;
     }
 
-    //the one that starts because the holderOfGameManager is in that scene
+    
     public void OpenMainMenu(){
         SceneManager.LoadScene("maine menu");
     }
@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void FoundCollectable(){
-        collectedCollectables++;
+        collectedCollectablesInLevel++;
     }
 
 }
