@@ -9,11 +9,14 @@ public class Jump : MonoBehaviour
     public bool isGrounded;
     public float jump = 7.0f;
 
+    private AudioSource sound;
+
     // Start is called before the first frame update
     void Start()
     {   
         isGrounded = true;
-        //rb = GetComponent<Rigidbody>();
+        sound = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -22,6 +25,8 @@ public class Jump : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = new Vector3(0, jump, 0);
+            sound.Play();
+
         }
     }
 

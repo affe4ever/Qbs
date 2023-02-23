@@ -10,11 +10,13 @@ public class Changegravity : MonoBehaviour
     public float force = 9.8f;
     public GameObject character;
     public Rigidbody rb;
+    private AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
     {
         gravityReversed = false;
+        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class Changegravity : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded) {
             Gravity();
+            sound.Play();
             //isSpacePressed = true;
         }
         /*else{
