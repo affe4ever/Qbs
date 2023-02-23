@@ -1277,6 +1277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orange Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 8401430318073606958, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f2c9bd39a0627d429b3f4830ea96d88, type: 2}
     - target: {fileID: 8401430318073606992, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
       propertyPath: m_RootOrder
       value: 2
