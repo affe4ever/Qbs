@@ -529,6 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movemont: {fileID: 1031696161}
+  rb: {fileID: 1031696169}
   walking: {fileID: 1031696168}
   fazing: {fileID: 1031696167}
 --- !u!114 &1031696161 stripped
@@ -739,6 +740,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &1031696169 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4079648519599778051, guid: 3a3b1f70ee181ed4ea643ab807843e97, type: 3}
+  m_PrefabInstance: {fileID: 1971962812}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1249528569
 GameObject:
   m_ObjectHideFlags: 0

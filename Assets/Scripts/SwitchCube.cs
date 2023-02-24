@@ -6,8 +6,6 @@ public class SwitchCube : MonoBehaviour
 {
 
 
-    public Camera cam;
-
     public Transform focus;
     public GameObject cube1;
     public GameObject cube2;
@@ -17,11 +15,14 @@ public class SwitchCube : MonoBehaviour
     void Start()
     {
         //focus = cube1.Rigidbody;
+        Switch(cube1);
     }
     
     // Update is called once per frame
     void Update()
     {
+        transform.LookAt(focus);
+
         if (Input.GetKey(KeyCode.Alpha1))
         {            
             if(cube1 != null)
@@ -49,21 +50,85 @@ public class SwitchCube : MonoBehaviour
     {
         if (cube == cube1)
         {
-            cube1.GetComponent<Movemont>().enabled = true;
-            cube2.GetComponent<Movemont>().enabled = false;
-            cube3.GetComponent<Movemont>().enabled = false;
+            focus = GameObject.Find(cube.name).transform;
+
+
+            //sätter på scripts för active           
+            MonoBehaviour[] scripts1 = cube1.GetComponents<MonoBehaviour>();
+            foreach(MonoBehaviour script in scripts1)
+            {
+                script.enabled = true;
+            }
+
+
+            //stänger av dom andra
+            MonoBehaviour[] scripts2 = cube2.GetComponents<MonoBehaviour>();
+            foreach(MonoBehaviour script in scripts2)
+            {
+                script.enabled = false;
+            }
+
+            MonoBehaviour[] scripts3 = cube3.GetComponents<MonoBehaviour>();
+            foreach(MonoBehaviour script in scripts3)
+            {
+                script.enabled = false;
+            }
+            
         }
         else if (cube == cube2)
         {
-            cube1.GetComponent<Movemont>().enabled = false;
-            cube2.GetComponent<Movemont>().enabled = true;
-            cube3.GetComponent<Movemont>().enabled = false;
+            focus = GameObject.Find(cube.name).transform;
+
+
+            //sätter på scripts för active           
+            MonoBehaviour[] scripts2 = cube2.GetComponents<MonoBehaviour>();
+            foreach(MonoBehaviour script in scripts2)
+            {
+                script.enabled = true;
+            }
+
+
+            //stänger av dom andra
+            MonoBehaviour[] scripts1 = cube1.GetComponents<MonoBehaviour>();
+            foreach(MonoBehaviour script in scripts1)
+            {
+                script.enabled = false;
+            }
+
+            MonoBehaviour[] scripts3 = cube3.GetComponents<MonoBehaviour>();
+            foreach(MonoBehaviour script in scripts3)
+            {
+                script.enabled = false;
+            }
         }
         else if (cube == cube3)
         {
-            cube1.GetComponent<Movemont>().enabled = false;
-            cube2.GetComponent<Movemont>().enabled = false;
-            cube3.GetComponent<Movemont>().enabled = true;
+            focus = GameObject.Find(cube.name).transform;
+
+
+            //sätter på scripts för active
+                       
+            MonoBehaviour[] scripts3 = cube3.GetComponents<MonoBehaviour>();
+            foreach(MonoBehaviour script in scripts3)
+            {
+                script.enabled = true;
+            }
+
+
+            //stänger av dom andra
+            
+            MonoBehaviour[] scripts1 = cube1.GetComponents<MonoBehaviour>();
+            foreach(MonoBehaviour script in scripts1)
+            {
+                script.enabled = false;
+            }
+
+            
+            MonoBehaviour[] scripts2 = cube2.GetComponents<MonoBehaviour>();
+            foreach(MonoBehaviour script in scripts2)
+            {
+                script.enabled = false;
+            }
         }
         
         
