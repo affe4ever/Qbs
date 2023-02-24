@@ -7,6 +7,7 @@ TagManager:
   - Flooor
   - Slime
   - Interactable
+  - camPosition
   layers:
   - Default
   - TransparentFX

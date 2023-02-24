@@ -5,7 +5,7 @@ using UnityEngine;
 public class SwitchCube : MonoBehaviour
 {
 
-
+    private Camera cam;
     public Transform focus;
     public GameObject cube1;
     public GameObject cube2;

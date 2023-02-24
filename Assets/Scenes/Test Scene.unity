@@ -2041,9 +2041,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7136907456601287321, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8401430318073606955, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
       propertyPath: m_Name
       value: Orange Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401430318073606956, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8401430318073606992, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
       propertyPath: m_RootOrder
@@ -2055,7 +2063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8401430318073606992, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9
+      value: 0.492
       objectReference: {fileID: 0}
     - target: {fileID: 8401430318073606992, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2096,6 +2104,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8401430318073606955, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
   m_PrefabInstance: {fileID: 1734926987}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1794643868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794643867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61e9f1dcf6df034886bcbd233b30bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 1794643867}
+  gravity: 5
+  playerSpeed: 2
 --- !u!1 &1859991693
 GameObject:
   m_ObjectHideFlags: 0
