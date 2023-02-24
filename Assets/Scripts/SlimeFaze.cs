@@ -5,21 +5,20 @@ using UnityEngine;
 public class SlimeFaze : MonoBehaviour
 {
     public Movemont movemont;
-    private Rigidbody rb;
+    public Rigidbody rb;
     public AudioSource walking;
     public AudioSource fazing;
 
     // Start is called before the first frame update
     void Start()
-    {
-        rb = GetComponent<Rigidbody>();       
+    {       
         Physics.IgnoreLayerCollision(6, 3);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(rb.velocity.magnitude != 0)
+        if(rb.velocity.magnitude >= 0.1)
         {
             walking.Play();
         }
