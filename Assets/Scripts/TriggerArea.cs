@@ -20,7 +20,7 @@ public class TriggerArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
-        if (other.gameObject.tag == "Player" && type == "door") { 
+        if (other.gameObject.tag == "ActivePlayer" && type == "door") { 
             GameEvents.current.DoorTriggerEnter(id);
         }
         if (type == "button" && !buttonPressed)

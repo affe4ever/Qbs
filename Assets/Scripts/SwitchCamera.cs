@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class SwitchCamera : MonoBehaviour
 {
-    //public Camera cam1;
-
+    
     private List<GameObject> cameras = new List<GameObject>();
     public Camera active;
     public int id;
@@ -22,7 +21,7 @@ public class SwitchCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        /*if (Input.GetKeyDown(KeyCode.E))
         {   
             if (id != cameras.Count)
             {
@@ -40,7 +39,14 @@ public class SwitchCamera : MonoBehaviour
                 active.transform.position = cameras[id].transform.position; 
             }
                 
-        }
+        }*/
     }
+
+    public void ChangeCamera (Vector3 placement)
+    {
+        active.transform.position = placement; 
+    }
+
+    
 
 }

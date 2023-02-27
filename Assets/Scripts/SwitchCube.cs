@@ -5,8 +5,8 @@ using UnityEngine;
 public class SwitchCube : MonoBehaviour
 {
 
-    private Camera cam;
     public Transform focus;
+    //public int active;
     public GameObject cube1;
     public GameObject cube2;
     public GameObject cube3;
@@ -27,6 +27,7 @@ public class SwitchCube : MonoBehaviour
         {            
             if(cube1 != null)
             {
+                
                 Switch(cube1); 
             }           
         }
@@ -34,6 +35,7 @@ public class SwitchCube : MonoBehaviour
         {
             if(cube2 != null)
             {
+                
                Switch(cube2); 
             }           
         }
@@ -41,6 +43,7 @@ public class SwitchCube : MonoBehaviour
         {
             if(cube3 != null)
             {
+                
                 Switch(cube3); 
             }    
         }
@@ -51,6 +54,9 @@ public class SwitchCube : MonoBehaviour
         if (cube == cube1)
         {
             focus = GameObject.Find(cube.name).transform;
+            cube1.tag = ("ActivePlayer");
+            cube2.tag = ("Player");
+            cube3.tag = ("Player");
 
 
             //sätter på scripts för active           
@@ -78,6 +84,9 @@ public class SwitchCube : MonoBehaviour
         else if (cube == cube2)
         {
             focus = GameObject.Find(cube.name).transform;
+            cube1.tag = ("Player");
+            cube2.tag = ("ActivePlayer");
+            cube3.tag = ("Player");
 
 
             //sätter på scripts för active           
@@ -104,6 +113,9 @@ public class SwitchCube : MonoBehaviour
         else if (cube == cube3)
         {
             focus = GameObject.Find(cube.name).transform;
+            cube1.tag = ("Player");
+            cube2.tag = ("Player");
+            cube3.tag = ("ActivePlayer");
 
 
             //sätter på scripts för active

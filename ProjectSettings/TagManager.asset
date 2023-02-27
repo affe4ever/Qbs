@@ -8,6 +8,7 @@ TagManager:
   - Slime
   - Interactable
   - camPosition
+  - ActivePlayer
   layers:
   - Default
   - TransparentFX

@@ -27,6 +27,11 @@ public class Changegravity : MonoBehaviour
             sound.Play();
             //isSpacePressed = true;
         }
+
+        if(gravityReversed)
+        {
+            rb.velocity = new Vector3(0, force, 0);
+        }
         /*else{
             isSpacePressed = false;
         }*/
