@@ -22,25 +22,25 @@ public class Movemont : MonoBehaviour
 
 	void Update () {
 		
-		if (Input.GetKey(KeyCode.UpArrow)){
+		if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)){
 			isForward = true;
 		}
 		else{
 			isForward = false;
 		}
-		if (Input.GetKey(KeyCode.DownArrow)){
+		if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)){
 			isBack = true;
 		}
 		else{
 			isBack = false;
 		}
-		if (Input.GetKey(KeyCode.LeftArrow)){
+		if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)){
 			isLeft = true;
 		}
 		else{
 			isLeft = false;
 		}
-		if (Input.GetKey(KeyCode.RightArrow)){
+		if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)){
 			isRight = true;
 		}
 		else {
