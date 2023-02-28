@@ -6,10 +6,11 @@ public class Changegravity : MonoBehaviour
 {
     public bool isSpacePressed;
     public bool gravityReversed;
-    public bool isGrounded;
+    //public bool isGrounded;
     public float force = 9.8f;
     public GameObject character;
-    public Rigidbody rb;
+    private Rigidbody rb;
+    private Movemont movementScript;
     private AudioSource sound;
 
     // Start is called before the first frame update
@@ -17,12 +18,14 @@ public class Changegravity : MonoBehaviour
     {
         gravityReversed = false;
         sound = GetComponent<AudioSource>();
+        rb = character.GetComponent<Rigidbody>();
+        movementScript = character.GetComponent<Movemont>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded) {
+        if(Input.GetKeyDown(KeyCode.Space) && movementScript.IsGrounded()) {
             Gravity();
             sound.Play();
             //isSpacePressed = true;
@@ -53,7 +56,7 @@ public class Changegravity : MonoBehaviour
             rb.velocity = new Vector3(0, force, 0);
         }*/
     }
-
+/*
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag == "Flooor"){
             isGrounded = true;
@@ -63,18 +66,20 @@ public class Changegravity : MonoBehaviour
         if (collision.gameObject.tag == "Flooor"){
             isGrounded = false;
         }
-    }
+    }*/
 
     void Gravity()
     {
         if (gravityReversed){
             gravityReversed = false;
+            movementScript.FlipGravityRaycast(Vector3.down);
             rb.velocity = new Vector3(0, -force, 0);
             rb.useGravity= true;
 
         }
         else if (!gravityReversed) {
             rb.useGravity=false;
+            movementScript.FlipGravityRaycast(Vector3.up);
             rb.velocity = new Vector3(0, force, 0);
             gravityReversed = true;
         }

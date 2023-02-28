@@ -11,17 +11,19 @@ public class Movemont : MonoBehaviour
 	public bool isForward;
 	public bool isBack;
 
+	private Vector3 directionDown;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        FlipGravityRaycast(Vector3.down);
     }
 
     // Update is called once per frame
 
 
 	void Update () {
-		
+		//print(IsGrounded());
 		if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)){
 			isForward = true;
 		}
@@ -63,19 +65,13 @@ public class Movemont : MonoBehaviour
 			transform.position += Vector3.back* speed * Time.deltaTime;
 		}
 	}
+
+
+
+	public void FlipGravityRaycast(Vector3 direction){
+        directionDown = transform.TransformDirection(direction);
+    }
+	public bool IsGrounded(){
+        return Physics.Raycast(transform.position, directionDown, 0.6f);
+    }
 }
-/*
-		if (Input.GetKey(KeyCode.RightArrow)){
-			transform.position += Vector3.right * speed * Time.deltaTime;
-		}
-		if (Input.GetKey(KeyCode.LeftArrow)){
-			transform.position += Vector3.left* speed * Time.deltaTime;
-		}
-		if (Input.GetKey(KeyCode.UpArrow)){
-			transform.position += Vector3.forward * speed * Time.deltaTime;
-		}
-		if (Input.GetKey(KeyCode.DownArrow)){
-			transform.position += Vector3.back* speed * Time.deltaTime;
-		}
-        
-*/
