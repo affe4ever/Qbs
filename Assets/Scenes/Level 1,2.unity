@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.172768, g: 0.21589169, b: 0.29782546, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1503,6 +1503,10 @@ PrefabInstance:
       propertyPath: speed
       value: 2.3
       objectReference: {fileID: 0}
+    - target: {fileID: 7136907456601287321, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 929043704}
     - target: {fileID: 8401430318073606955, guid: f11fc3d962abbe24c84efd469a900976, type: 3}
       propertyPath: m_Name
       value: Orange Cube
