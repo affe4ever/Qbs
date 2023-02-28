@@ -6,10 +6,15 @@ public class SwitchCube : MonoBehaviour
 {
 
     public Transform focus;
-    //public int active;
+
     public GameObject cube1;
+    private Vector3 camCube1;
+
     public GameObject cube2;
+    private Vector3 camCube2;
+    
     public GameObject cube3;
+    private Vector3 camCube3;
 
     // Start is called before the first frame update
     void Start()

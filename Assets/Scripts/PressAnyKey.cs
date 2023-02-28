@@ -15,7 +15,7 @@ public class PressAnyKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKey)
+        if (Input.GetKey(KeyCode.Space))
         {
             canvasObject.enabled = false;
         }

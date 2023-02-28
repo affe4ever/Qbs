@@ -25,6 +25,7 @@ public class CameraTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "ActivePlayer")
         {
+            
             cam.ChangeCamera(placement.transform.position);
         }    
     }
