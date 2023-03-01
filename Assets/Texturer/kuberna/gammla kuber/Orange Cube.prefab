@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 48af4dc515b18d84a836cf6af99d3193, type: 2}
+  - {fileID: 2100000, guid: f2b01079d4d224d47a1eb49e47bb9cd0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,10 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSpacePressed: 0
   gravityReversed: 0
-  isGrounded: 0
   force: 9.8
   character: {fileID: 8401430318073606955}
-  rb: {fileID: 8401430318073606956}
 --- !u!114 &7136907456601287321
 MonoBehaviour:
   m_ObjectHideFlags: 0
