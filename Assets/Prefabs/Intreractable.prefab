@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3899431516175029435}
   - component: {fileID: 3899431516175029429}
   - component: {fileID: 3899431516175029432}
+  - component: {fileID: 5764532266290256802}
   m_Layer: 0
   m_Name: Intreractable
   m_TagString: Interactable
@@ -115,3 +116,16 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &5764532266290256802
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3899431516175029430}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.52673244, z: 1}
+  m_Center: {x: 0, y: 0.23663385, z: 0}
