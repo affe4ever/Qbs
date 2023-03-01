@@ -5,17 +5,19 @@ using UnityEngine;
 public class Movemont : MonoBehaviour
 {
 	public float speed = 2.0f;
-	public GameObject character;
+	private GameObject character;
 	public bool isRight;
 	public bool isLeft;
 	public bool isForward;
 	public bool isBack;
 
 	private Vector3 directionDown;
+	public Vector3 cam;
 
     // Start is called before the first frame update
     void Start()
     {
+		character = this.gameObject;
         FlipGravityRaycast(Vector3.down);
     }
 

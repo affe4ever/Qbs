@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class TestButton : MonoBehaviour
 {
+    private AudioSource sound;
     public GameObject door;
+
     // Start is called before the first frame update
     void Start()
     {
+        sound = GetComponent<AudioSource>();
         door.GetComponent<TestDoor>().amount ++;
     }
 
@@ -20,6 +23,7 @@ public class TestButton : MonoBehaviour
     private void OnTriggerEnter(Collider other){
         if (other.gameObject.tag == "ActivePlayer" || other.gameObject.tag == "Interactable" || other.gameObject.tag == "Player")
         {
+            sound.Play();
             door.GetComponent<TestDoor>().pressed ++;
         }
     }
@@ -27,6 +31,7 @@ public class TestButton : MonoBehaviour
     private void OnTriggerExit(Collider other){
         if (other.gameObject.tag == "ActivePlayer" || other.gameObject.tag == "Interactable" || other.gameObject.tag == "Player")
         {
+            sound.Play();
             door.GetComponent<TestDoor>().pressed --;
         }
     }

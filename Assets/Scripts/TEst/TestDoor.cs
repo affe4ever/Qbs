@@ -10,7 +10,9 @@ public class TestDoor : MonoBehaviour
     public int pressed;
     public int amount;
     public bool yes;
-    private int times;
+    public AudioSource openSound;
+    public AudioSource closesound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +49,7 @@ public class TestDoor : MonoBehaviour
 
     private void OpenDoor()
     {
-        times = 1;
+        openSound.Play();
         open = true;
         this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<Light>().color = Color.green;
         this.gameObject.transform.GetChild(1).localPosition = new Vector3(0, 0, +1.0f);
@@ -56,6 +58,7 @@ public class TestDoor : MonoBehaviour
 
     private void CloseDoor()
     {
+        closesound.Play();
         open = false;
         this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<Light>().color = Color.red;
         this.gameObject.transform.GetChild(1).position -= new Vector3(0, 0, 1.6f);
