@@ -18,18 +18,16 @@ public class CameraTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //id = CameraController.GetComponent<SwitchCube>().active;
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "ActivePlayer")
         {
-            
+            other.GetComponent<Movemont>().cam = placement.transform.position;
             cam.ChangeCamera(placement.transform.position);
         }    
     }
-
-    
 
 }

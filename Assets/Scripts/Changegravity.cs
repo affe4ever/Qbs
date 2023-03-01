@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Changegravity : MonoBehaviour
 {
-    public bool isSpacePressed;
-    public bool gravityReversed;
+    //public bool isSpacePressed;
     //public bool isGrounded;
+    public bool gravityReversed;
     public float force = 9.8f;
     public GameObject character;
     private Rigidbody rb;

@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-
+    //public bool isGrounded;
     public GameObject character;
     private Rigidbody rb;
     private Movemont movementScript;
-    //public bool isGrounded;
-    public float jump = 7.0f;
-
-    
-
+    public float jump = 7.0f; 
     private AudioSource sound;
 
     // Start is called before the first frame update
@@ -28,6 +24,7 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.Space) && movementScript.IsGrounded())
         {
             rb.velocity = new Vector3(0, jump, 0);
