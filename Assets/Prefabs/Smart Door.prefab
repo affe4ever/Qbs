@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3385186100626249798}
   - component: {fileID: 8792422876293830884}
+  - component: {fileID: 6389376897154685856}
   m_Layer: 0
   m_Name: Smart Door
   m_TagString: Untagged
@@ -47,13 +48,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288013504177371150}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4be3d3730f4c57840a3d7403108580ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
   isDoorOpen: 0
+--- !u!114 &6389376897154685856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288013504177371150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978a2a9e6478d874b947d8f009c14390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 0
+  pressed: 0
+  amount: 0
+  yes: 0
 --- !u!1 &4656296757461100244
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,6 +84,7 @@ GameObject:
   - component: {fileID: 6969977431114031232}
   - component: {fileID: 7199586286979801337}
   - component: {fileID: 8792422876597097520}
+  - component: {fileID: 8677325133158346281}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -159,13 +177,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4656296757461100244}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc4a6d348e4a86c4e9beac202ce05090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
   type: door
+--- !u!114 &8677325133158346281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4656296757461100244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ffa5e38de7d7a43a07fea61318b588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4978861677251588954
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,15 @@ public class SwitchCube : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (cube2 == null)
+        {
+            cube2 = null;
+        }
+
+        if (cube3 == null)
+        {
+            cube3 = null;
+        }
         //focus = cube1.Rigidbody;
         Switch(cube1);
     }
@@ -31,16 +40,14 @@ public class SwitchCube : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha1))
         {            
             if(cube1 != null)
-            {
-                
+            {               
                 Switch(cube1); 
             }           
         }
         else if(Input.GetKey(KeyCode.Alpha2))
         {
             if(cube2 != null)
-            {
-                
+            {               
                Switch(cube2); 
             }           
         }
@@ -60,8 +67,8 @@ public class SwitchCube : MonoBehaviour
         {
             focus = GameObject.Find(cube.name).transform;
             cube1.tag = ("ActivePlayer");
-            cube2.tag = ("Player");
-            cube3.tag = ("Player");
+            
+            
 
 
             //sätter på scripts för active           
@@ -71,18 +78,25 @@ public class SwitchCube : MonoBehaviour
                 script.enabled = true;
             }
 
-
             //stänger av dom andra
-            MonoBehaviour[] scripts2 = cube2.GetComponents<MonoBehaviour>();
-            foreach(MonoBehaviour script in scripts2)
-            {
-                script.enabled = false;
+            if (cube2 != null)
+            { 
+                cube2.tag = ("Player");
+                MonoBehaviour[] scripts2 = cube2.GetComponents<MonoBehaviour>();
+                foreach(MonoBehaviour script in scripts2)
+                {
+                    script.enabled = false;
+                }
             }
 
-            MonoBehaviour[] scripts3 = cube3.GetComponents<MonoBehaviour>();
-            foreach(MonoBehaviour script in scripts3)
+            if (cube3 != null)
             {
-                script.enabled = false;
+                cube3.tag = ("Player");
+                MonoBehaviour[] scripts3 = cube3.GetComponents<MonoBehaviour>();
+                foreach(MonoBehaviour script in scripts3)
+                {
+                    script.enabled = false;
+                }
             }
             
         }
@@ -91,7 +105,7 @@ public class SwitchCube : MonoBehaviour
             focus = GameObject.Find(cube.name).transform;
             cube1.tag = ("Player");
             cube2.tag = ("ActivePlayer");
-            cube3.tag = ("Player");
+            
 
 
             //sätter på scripts för active           
@@ -109,11 +123,16 @@ public class SwitchCube : MonoBehaviour
                 script.enabled = false;
             }
 
-            MonoBehaviour[] scripts3 = cube3.GetComponents<MonoBehaviour>();
-            foreach(MonoBehaviour script in scripts3)
+            if (cube3 != null)
             {
-                script.enabled = false;
+                cube3.tag = ("Player");
+                MonoBehaviour[] scripts3 = cube3.GetComponents<MonoBehaviour>();
+                foreach(MonoBehaviour script in scripts3)
+                {
+                    script.enabled = false;
+                }
             }
+            
         }
         else if (cube == cube3)
         {

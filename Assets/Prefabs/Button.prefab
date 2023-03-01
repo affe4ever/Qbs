@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9027562936562579422}
   - component: {fileID: 9027562936562579408}
   - component: {fileID: 9027562936562579409}
+  - component: {fileID: 90286209212112323}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -60,6 +61,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 2, z: 0.5}
   m_Center: {x: 0, y: 0.30557156, z: 0}
+--- !u!114 &90286209212112323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9027562936562579423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33aae83fe75d10d4fa79e0ffa427f7f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 0}
 --- !u!1 &9027562936568009670
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +278,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9027562937768947227}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab6222cb74f87c646a65106244c1a9c4, type: 3}
   m_Name: 

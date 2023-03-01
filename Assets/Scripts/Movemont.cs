@@ -48,6 +48,7 @@ public class Movemont : MonoBehaviour
 		else {
 			isRight = false;
 		}
+
 	}
     
 
@@ -65,7 +66,6 @@ public class Movemont : MonoBehaviour
 			transform.position += Vector3.back* speed * Time.deltaTime;
 		}
 	}
-
 
 
 	public void FlipGravityRaycast(Vector3 direction){

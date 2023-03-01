@@ -5,19 +5,17 @@ using UnityEngine;
 public class TestDoor : MonoBehaviour
 {
   
-    
+    private GameManager gm;
     public bool open;
     public int pressed;
     public int amount;
     public bool yes;
-    private  GameObject trigger;
-
     private int times;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gm = GameManager.instance;
         yes = false;
         if (open){
             OpenDoor();
@@ -27,7 +25,7 @@ public class TestDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-  
+        
         if (!open && amount == pressed)
         {
             OpenDoor();            
@@ -37,16 +35,15 @@ public class TestDoor : MonoBehaviour
             CloseDoor();
         }
 
+        if (yes && open)
+        {
+            gm.NextLevel();
+        }
+
     }
 
     // funkar inte just nu
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "ActivePlayer" && open)
-        {
-            yes = true;
-        }
-    }
+ 
 
     private void OpenDoor()
     {
