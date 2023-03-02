@@ -20,6 +20,15 @@ public class SwitchCube : MonoBehaviour
     {
         active = gameObject.GetComponent<SwitchCamera>();
 
+        if (cube1 == null)
+        {
+            cube1 = null;
+        }
+        else
+        {
+            cube1.GetComponent<Movemont>().cam = active.transform.position;
+        }
+
         if (cube2 == null)
         {
             cube2 = null;
