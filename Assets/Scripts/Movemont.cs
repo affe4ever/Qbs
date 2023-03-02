@@ -25,8 +25,9 @@ public class Movemont : MonoBehaviour
 
 
 	void Update () {
-		//print(IsGrounded());
-		if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)){
+        Debug.DrawRay(transform.position, directionDown);
+        //print(IsGrounded());
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)){
 			isForward = true;
 		}
 		else{
@@ -74,6 +75,7 @@ public class Movemont : MonoBehaviour
         directionDown = transform.TransformDirection(direction);
     }
 	public bool IsGrounded(){
-        return Physics.Raycast(transform.position, directionDown, 0.6f);
+		Ray theRay = new Ray(transform.position, directionDown);
+		return Physics.Raycast(theRay, out RaycastHit hit, 0.6f);
     }
 }
