@@ -15,14 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 1,0.unity
     guid: fd5cec96cd81bb4429e9db9771864f4e
   - enabled: 1
-    path: Assets/Scenes/Level 1,2.unity
+    path: Assets/Scenes/Level 1,3.unity
     guid: 592be098aac509b4daa292abc30dd402
   - enabled: 1
-    path: Assets/Scenes/Level 1,3.unity
+    path: Assets/Scenes/Level 1,2.unity
     guid: 6cf8481372552944b9698033c1148844
   - enabled: 1
     path: Assets/Scenes/en level.unity
     guid: 4d392e9c4ab593649ab67fb471b6437f
+  - enabled: 1
+    path: Assets/Scenes/level button Maze.unity
+    guid: d9399ea68811b8e4487ec8b3a63f5c36
   - enabled: 1
     path: Assets/Scenes/End Menu.unity
     guid: 39dae0c0c6d9fe04dbd827581ffdc434
