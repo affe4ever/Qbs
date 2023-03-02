@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     private int CollectablesInLevel;
     private int collectedCollectablesInLevel;
 
+    private AudioSource music;
+
 //Singleton start
     private static GameManager _instance;
     public static GameManager instance{
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        music = gameObject.GetComponent<AudioSource>();
         DontDestroyOnLoad(me);
         awake();
         isGameOver = false;
@@ -88,5 +91,8 @@ public class GameManager : MonoBehaviour
     public void FoundCollectable(){
         collectedCollectablesInLevel++;
     }
-
+    public void PlayMusic()
+    {
+        music.Play();
+    }
 }
