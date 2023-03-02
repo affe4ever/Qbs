@@ -1762,7 +1762,7 @@ PrefabInstance:
       propertyPath: isDoorOpen
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8792422876597097520, guid: 6020d02a733834349bfb1f75413be154, type: 3}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}

@@ -12,6 +12,7 @@ public class TestDoor : MonoBehaviour
     public bool yes;
     public AudioSource openSound;
     public AudioSource closesound;
+    public Vector3 doorVector;
 
 
     // Start is called before the first frame update
@@ -19,8 +20,24 @@ public class TestDoor : MonoBehaviour
     {
         gm = GameManager.instance;
         yes = false;
+        if (transform.rotation.eulerAngles.y > -45 && transform.rotation.eulerAngles.y < 45)
+        {
+            doorVector = new Vector3(0, 0, -1.6f);
+        }
+        else if (transform.rotation.eulerAngles.y > 45 && transform.rotation.eulerAngles.y < 135)
+        {
+            doorVector = new Vector3(-1.6f, 0, 0);
+        }
+        else if (transform.rotation.eulerAngles.y > 135 && transform.rotation.eulerAngles.y < 225)
+        {
+            doorVector = new Vector3(0, 0, 1.6f);
+        }
+        else if (transform.rotation.eulerAngles.y > 225 && transform.rotation.eulerAngles.y < 315)
+        {
+            doorVector = new Vector3(1.6f, 0, 0);
+        }
         if (open){
-            OpenDoor();
+        OpenDoor();
         }
     }
 
@@ -52,8 +69,8 @@ public class TestDoor : MonoBehaviour
         openSound.Play();
         open = true;
         this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<Light>().color = Color.green;
-        this.gameObject.transform.GetChild(1).position += new Vector3(0, 0, 1.6f);
-        this.gameObject.transform.GetChild(2).position -= new Vector3(0, 0, 1.6f);
+        this.gameObject.transform.GetChild(1).position += doorVector;
+        this.gameObject.transform.GetChild(2).position -= doorVector;
     }
 
     private void CloseDoor()
@@ -61,8 +78,8 @@ public class TestDoor : MonoBehaviour
         closesound.Play();
         open = false;
         this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<Light>().color = Color.red;
-        this.gameObject.transform.GetChild(1).position -= new Vector3(0, 0, 1.6f);
-        this.gameObject.transform.GetChild(2).position += new Vector3(0, 0, 1.6f);
+        this.gameObject.transform.GetChild(1).position -= doorVector;
+        this.gameObject.transform.GetChild(2).position += doorVector;
     }
 
 }
