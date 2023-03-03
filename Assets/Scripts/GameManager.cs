@@ -43,10 +43,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R)){
             ReloadLevel();
         }
-        if (Input.GetKeyDown(KeyCode.G)){
-            NextLevel();
-        }
-        //for testing 
+                //for testing 
         if (Input.GetKeyDown(KeyCode.J)){
             Debug.Log("Collectables: " + collectedCollectables + "  CollectablesInLevel: " + collectedCollectablesInLevel);
         }
