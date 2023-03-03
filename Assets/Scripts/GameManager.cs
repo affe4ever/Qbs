@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
             ReloadLevel();
         }
         if (Input.GetKeyDown(KeyCode.G)){
-            FoundCollectable();
+            NextLevel();
         }
         //for testing 
         if (Input.GetKeyDown(KeyCode.J)){
