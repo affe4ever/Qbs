@@ -1126,7 +1126,7 @@ PrefabInstance:
     - target: {fileID: 90286209212112323, guid: e0d5062dac039d44198169cb1bca619a, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1278713059}
     - target: {fileID: 9027562936568009691, guid: e0d5062dac039d44198169cb1bca619a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1957,7 +1957,7 @@ PrefabInstance:
     - target: {fileID: 90286209212112323, guid: e0d5062dac039d44198169cb1bca619a, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1278713059}
     - target: {fileID: 9027562936568009691, guid: e0d5062dac039d44198169cb1bca619a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2653,23 +2653,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 610637ab19a738a43877af24351ea742, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6020d02a733834349bfb1f75413be154, type: 3}
---- !u!1 &1278713057 stripped
+--- !u!1 &1278713059 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4656296757461100244, guid: 6020d02a733834349bfb1f75413be154, type: 3}
+  m_CorrespondingSourceObject: {fileID: 288013504177371150, guid: 6020d02a733834349bfb1f75413be154, type: 3}
   m_PrefabInstance: {fileID: 1278713056}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1278713058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278713057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1ffa5e38de7d7a43a07fea61318b588, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1294629019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3357,7 +3345,7 @@ PrefabInstance:
     - target: {fileID: 90286209212112323, guid: e0d5062dac039d44198169cb1bca619a, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1278713059}
     - target: {fileID: 9027562936568009691, guid: e0d5062dac039d44198169cb1bca619a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3822,6 +3810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 3961890301277667252, guid: ef69e400610f8f44d9091fc564a25dca, type: 3}
+      propertyPath: m_TagString
+      value: ActivePlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 3961890301277667257, guid: ef69e400610f8f44d9091fc564a25dca, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4065,7 +4057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832638547}
   m_LocalRotation: {x: -1, y: -0, z: -0, w: 0.0000029504295}
-  m_LocalPosition: {x: 0, y: 10.86, z: 0}
+  m_LocalPosition: {x: 0.55, y: 20.12, z: 0}
   m_LocalScale: {x: 2.329, y: 1, z: 2.2109566}
   m_ConstrainProportionsScale: 0
   m_Children: []
