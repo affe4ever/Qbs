@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
 
     
     public void OpenMainMenu(){
-        SceneManager.LoadScene("maine menu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void OpenPauseMenu(){
