@@ -8,7 +8,7 @@ public class TestButton : MonoBehaviour
     public GameObject door;
     private Vector3 direction = Vector3.up;
     private float range = 0.6f;
-    private bool buttonPressed = false;
+    public bool buttonPressed = false;
     /*
     private BoxCollider BC;
     private Vector3 topRight;
@@ -29,7 +29,7 @@ public class TestButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.DrawRay(topRight, transform.TransformDirection(direction * range));
+        Debug.DrawRay(transform.position, direction);
     }
     
     private void OnTriggerEnter(Collider other){
@@ -46,11 +46,18 @@ public class TestButton : MonoBehaviour
         if ((other.gameObject.tag == "ActivePlayer" || other.gameObject.tag == "Interactable" || other.gameObject.tag == "Player") && buttonPressed)
         {
             Ray theRay = new(transform.position, transform.TransformDirection(direction * range));
+            Debug.Log("yeet");
             if (!Physics.Raycast(theRay, out RaycastHit hit, range)) {
+                Debug.Log("dinmamma");
                 sound.Play();
                 door.GetComponent<TestDoor>().pressed--;
                 buttonPressed = false;
-            }      
+            }
+            else
+            {
+                Debug.Log("hit");
+                Debug.Log(hit.transform.name);
+            }
         }
     }
 }
