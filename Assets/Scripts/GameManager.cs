@@ -40,10 +40,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OpenMainMenu();
+        }
         if (Input.GetKeyDown(KeyCode.R)){
             ReloadLevel();
         }
-                //for testing 
+            //for testing 
         if (Input.GetKeyDown(KeyCode.J)){
             Debug.Log("Collectables: " + collectedCollectables + "  CollectablesInLevel: " + collectedCollectablesInLevel);
         }
@@ -75,6 +79,7 @@ public class GameManager : MonoBehaviour
     
     public void OpenMainMenu(){
         SceneManager.LoadScene("MainMenu");
+        GetComponent<AudioSource>().Stop();
     }
 
     public void OpenPauseMenu(){

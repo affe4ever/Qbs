@@ -30,6 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 4.unity
     guid: d9399ea68811b8e4487ec8b3a63f5c36
   - enabled: 1
-    path: Assets/Scenes/End Menu.unity
-    guid: 39dae0c0c6d9fe04dbd827581ffdc434
+    path: Assets/Scenes/EndScreen.unity
+    guid: fcc4db7e79bd1834ea20a42c3fbef3b1
   m_configObjects: {}
