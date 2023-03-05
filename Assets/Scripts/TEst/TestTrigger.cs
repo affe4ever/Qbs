@@ -22,7 +22,7 @@ public class TestTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "ActivePlayer")
         {
-            door.yes = true;
+            door.canGoTrough = true;
             
         }
     }
@@ -31,7 +31,7 @@ public class TestTrigger : MonoBehaviour
     {
 if (other.gameObject.tag == "ActivePlayer")
         {
-            door.yes = false;
+            door.canGoTrough = false;
             
         }
     }

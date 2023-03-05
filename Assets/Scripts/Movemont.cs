@@ -26,7 +26,7 @@ public class Movemont : MonoBehaviour
 
 	void Update () {
         Debug.DrawRay(transform.position, directionDown);
-        //print(IsGrounded());
+        
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)){
 			isForward = true;
 		}

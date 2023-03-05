@@ -28,45 +28,15 @@ public class Changegravity : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && movementScript.IsGrounded()) {
             Gravity();
             sound.Play();
-            //isSpacePressed = true;
+            
         }
 
         if(gravityReversed)
         {
             rb.velocity = new Vector3(0, force, 0);
         }
-        /*else{
-            isSpacePressed = false;
-        }*/
+        
     }
-
-    void FixedUpdate() {
-
-        /*
-        if (isSpacePressed){
-            if (gravityReversed){
-                gravityReversed = false;
-            }
-            else {
-                gravityReversed = true; 
-            }
-        }
-
-        if (gravityReversed) {
-            rb.velocity = new Vector3(0, force, 0);
-        }*/
-    }
-/*
-    void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.tag == "Flooor"){
-            isGrounded = true;
-        }
-    }
-    void OnCollisionExit(Collision collision) {
-        if (collision.gameObject.tag == "Flooor"){
-            isGrounded = false;
-        }
-    }*/
 
     void Gravity()
     {

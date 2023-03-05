@@ -9,7 +9,7 @@ public class TestDoor : MonoBehaviour
     public bool open;
     public int pressed;
     public int amount;
-    public bool yes;
+    public bool canGoTrough;
     public AudioSource openSound;
     public AudioSource closesound;
     public Vector3 doorVector;
@@ -19,7 +19,7 @@ public class TestDoor : MonoBehaviour
     void Start()
     {
         gm = GameManager.instance;
-        yes = false;
+        canGoTrough = false;
         if (transform.rotation.eulerAngles.y > -45 && transform.rotation.eulerAngles.y < 45)
         {
             doorVector = new Vector3(0, 0, -1.6f);
@@ -54,7 +54,7 @@ public class TestDoor : MonoBehaviour
             CloseDoor();
         }
 
-        if (yes && open)
+        if (canGoTrough && open)
         {
             gm.NextLevel();
         }

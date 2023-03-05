@@ -18,14 +18,7 @@ public class SlimeFaze : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if(rb.velocity.magnitude >= 0.1)
-        {
-            walking.Play();
-        }
-        else{
-            walking.Pause();
-        }*/
+
     }
 
     private void OnTriggerEnter(Collider other) {

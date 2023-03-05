@@ -32,15 +32,5 @@ public class Jump : MonoBehaviour
 
         }
     }
-/*
-    void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.tag == "Flooor"){
-            isGrounded = true;
-        }
-    }
-    void OnCollisionExit(Collision collision) {
-        if (collision.gameObject.tag == "Flooor"){
-            isGrounded = false;
-        }
-    }*/
+
 }
