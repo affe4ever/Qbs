@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.172768, g: 0.21589169, b: 0.29782546, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2144,10 +2144,18 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1058649909}
+    - target: {fileID: 9027562936568009688, guid: e0d5062dac039d44198169cb1bca619a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9027562936568009691, guid: e0d5062dac039d44198169cb1bca619a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4d234f2b4ce58e44c8e92794123f8742, type: 2}
+    - target: {fileID: 9027562937768947217, guid: e0d5062dac039d44198169cb1bca619a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9027562937768947226, guid: e0d5062dac039d44198169cb1bca619a, type: 3}
       propertyPath: id
       value: 1
