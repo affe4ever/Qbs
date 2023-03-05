@@ -392,7 +392,7 @@ PrefabInstance:
     - target: {fileID: 9027562936568009691, guid: e0d5062dac039d44198169cb1bca619a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3294ea8f3274e5f43866dc2898b7b0f9, type: 2}
+      objectReference: {fileID: 2100000, guid: 76eb05c0f7bf4ad4da75a68c3e7135cb, type: 2}
     - target: {fileID: 9027562937768947227, guid: e0d5062dac039d44198169cb1bca619a, type: 3}
       propertyPath: m_Name
       value: Button (1)
